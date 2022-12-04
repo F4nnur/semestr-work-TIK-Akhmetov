@@ -32,24 +32,13 @@ def shennon(file):
     logged_lst = []    
     for elem in for_log:
         logged_lst.append(round(math.log2(1//elem)))
-    
+
     prefinal_dict = dict(zip(lst_for_binary, logged_lst))
+    final_dict = []
     for key, value in prefinal_dict.items():
-        print(key, value)
-        
-        
+        final_dict.append(str(key)[:value])
     
-    
-
-    
-    
-    
-    
-
-    
-    
-    
+    return final_dict    
         
     
-    
-shennon('input.txt')
+print(shennon('input.txt'))
