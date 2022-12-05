@@ -92,4 +92,4 @@ def shennon(file, user_word):
     return new_dict_for_elems, encoded_word
         
     
-print(shennon('input.txt', 'bbaacd'))
+print(shennon('input.txt', 'abbabacc'))

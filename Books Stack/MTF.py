@@ -3,7 +3,7 @@ from string import ascii_lowercase
 SYMBOLTABLE = list(ascii_lowercase)
 
 def move2front_decode(sequence, symboltable):
-    chars, pad = [], symboltable[::]
+    chars, pad = [], symboltable[:]
     for indx in sequence:
         char = pad[indx]
         chars.append(char)
