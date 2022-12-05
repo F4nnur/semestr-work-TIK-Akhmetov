@@ -1,6 +1,6 @@
 def bwt(bwt):
     #Пустой столбик
-    table = [""] * len(bwt)  
+    table = [""] * len(bwt)
 
     for i in range(len(bwt)):
         #Добавляем столбик
