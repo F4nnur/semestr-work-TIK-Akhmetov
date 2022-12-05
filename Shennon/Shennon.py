@@ -11,7 +11,6 @@ def shennon(file):
     lines_of_numbers = list(map(float, lines_of_numbers))
     dict_n_l = dict(zip(lines_of_letters, lines_of_numbers))
     soted_dict = dict(sorted(dict_n_l.items(), key=itemgetter(1), reverse=True))
-    print(soted_dict)
     
     lst_of_nmb = []
     for_log = []
@@ -24,6 +23,8 @@ def shennon(file):
     int_numbers_lst = []
     for elem in summ_iter:
          int_numbers_lst.append(int((elem % 1 * 100)))
+    # print(int_numbers_lst)
+
     
     lst_for_binary = []
     
@@ -32,7 +33,7 @@ def shennon(file):
     
     logged_lst = []    
     for elem in for_log:
-        logged_lst.append(math.ceil(math.log2(1//elem)))
+        logged_lst.append(math.ceil(math.log2(1/elem)))
     print(logged_lst)
 
     prefinal_dict = dict(zip(lst_for_binary, logged_lst))
