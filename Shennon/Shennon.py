@@ -70,19 +70,15 @@ def shennon(file, user_word):
     for_log = lst_of_nmb.copy()
 
     summ_iter = cumsum(lst_of_nmb) - lst_of_nmb
-
     
     lst_for_binary = []
     
-
     logged_lst = []    
     for elem in for_log:
         logged_lst.append(math.ceil(math.log2(1/elem)))
-    print(summ_iter)
-    print(logged_lst)
+
     for i in range(len(summ_iter)):
         lst_for_binary.append(float_bin(summ_iter[i], int(logged_lst[i])))
-    print(lst_for_binary)
 
     prefinal_dict = dict(zip(lst_for_binary, logged_lst))
     final_dict = []
@@ -90,7 +86,6 @@ def shennon(file, user_word):
         final_dict.append(str(key)[:value])
     
     new_dict = dict(zip(symbols_of_sorted_dict, final_dict))
-    # print(new_dict)
     
     new_dict_for_elems = {e: new_dict[e] for e in list_of_user_word}
     encoded_word = ''.join([new_dict_for_elems[l] for l in user_word])
